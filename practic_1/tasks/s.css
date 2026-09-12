@@ -1,0 +1,19 @@
+td{
+    border: 1px solid black;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 15px;
+}
+
+.flex input{
+    padding: 10px;
+}
+
+.x{
+    display: flex;
+    gap: 5px;
+}
