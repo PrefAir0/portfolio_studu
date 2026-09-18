@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+    <h2>Задание 10</h2>
+    <form name="forma_1">
+        <input type="button" value="Пуск" name="beg_but" class="b_but" size="50" onclick="beg()">
+    </form>
+    <form name="forma_2">
+        <input type="button" value="Кнопка" name="beg_2" class="btn" size="50" id ="btn" onclick="dvig()">
+    </form>
+</body>
+<script>
+    function beg(){
+        var elem = document.getElementById("btn")
+        var pos = 0
+        var id = setInterval(frame, 0.003)
+        function frame(){
+            if (pos == 850){
+                setInterval(1)
+                elem.style.bottom = pos+"px"
+                
+            }
+            else{
+                pos++
+                elem.style.top = pos+"px"
+                elem.style.left = pos+"px"
+            }
+        }
+    }
+
+    function dvig(){
+        alert("ПОЙМАЛ")
+    }
+</script>
+</html>

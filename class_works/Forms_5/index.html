@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../../portfolio/index.html">Вернуться назад</a>
+    <div class="container">
+        <main>
+        <form class="form1">
+            <h2>Задание 1</h2>
+            <input type="text" name="t1" placeholder="Введите текст" size="20" maxlength="50">        
+        </form>
+
+        <form class="style-form form1">
+            <h2>Задание 2</h2>
+            <input type="text" name = "t2" placeholder="&#128100">
+            <input type="password" name=" t3" placeholder="&#128274">
+        </form>
+
+        <form name="forma1" class="form3"> 
+            <h2>Задание 3</h2>
+            <p>Ваши любимые предметы:</p>
+            <div class="flex">
+            <input type="checkbox" checked>Математика 
+            <input type="checkbox" > Литература 
+            <input type="checkbox" > Физическая культура
+            </div>
+        </form> 
+
+        <form action="" class="form4">
+            <h2>Задание 4</h2>
+            <p>Укажите ваш пол</p>
+            <div class="flex">
+            <input type="radio" value="man" name="sex" checked> <p>Мужской</p>
+            <input type="radio" value="women" name="sex"> <p>Женский</p>
+            </div>
+        </form>
+
+        <form action="" class="form5">
+            <h2>Задание 5</h2>
+            <button>Кнопка с текстом</button>
+            <button><img src="img/image.png" style="width: 15px; height: auto;" alt=""> Кнопка с картинкой</button>
+        </form>
+        <form name="forma1"> 
+            <h2>Задание 6</h2>
+        <input type="file" name="load" size="50"> 
+        </form> 
+        <form name="forma1"> 
+            <h2>Задание 7</h2>
+            <p>Ваши навыки</p>
+            <div class="flex">
+                
+                <input type="checkbox" checked>Frontend 
+                <input type="checkbox" > Backend
+                <input type="checkbox" > Android
+            </div>
+            <div class="flex">
+                <p>Ваш основной ЯП</p>
+                <select name="" id="">
+                    <option value="">C#</option>
+                    <option value="">Python</option>
+                    <option value="">Java</option>
+                    <option value="">C++</option>
+                </select>
+            </div>
+            <div class="">
+                <p>Сопроводительное письмо</p>
+                <textarea name="" id="" style="width: 300px;"></textarea>
+            </div>
+        </form> 
+        <form action="">
+            <h2>Задание 8</h2>
+            <h2>Пожалуйста введите ваше Имя.</h2>
+            <div class="flex">
+                <p>Ваше имя:</p>
+                <input type="text" name="contact_name">
+            </div>
+            <input style="width: 150px;" type="submit" name="send" value="Отправить данные">
+        </form>
+
+        <form name="calc">
+            <h2>Задание 9</h2>
+                <p>2 + 2</p>
+            <div class="" style="display: flex; flex-direction: column; gap: 10px; width: 200px">
+                <input type="text" name="answer">
+                <input type="button" onclick="check();" value = "Проверить">
+            </div>
+        </form>
+        <h2>Задание 10</h2>
+        <a href="task10.html">Ссылка</a>
+        </main>
+    </div>
+    <script>
+        function check(){
+            if (calc.answer.value == 4){
+                alert("Правильно")
+                
+            }
+            else{
+                alert("Неправильно")
+            }
+        }
+    </script>
+</body>
+</html>
