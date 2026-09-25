@@ -1,0 +1,67 @@
+.style-test {
+  color: black;
+  background: rgb(9, 167, 101);
+}
+
+#first{
+    padding-left: 50px;
+    background-image: url(img/images.webp);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    margin-left: 50px;
+}
+
+#second{
+    padding: 20px;
+    background-image: url(img/images.webp);
+    background-size: auto;
+}
+
+.picture-block img{
+    width: 500px;
+    height: auto;
+}
+
+#img1{
+    border-radius: 90px;
+}
+
+#img2{
+    opacity: 50%
+}
+
+#img3{
+    filter:contrast(100)
+}
+
+.gg{
+    margin-top: 200px;
+    width: 100px;
+    height: auto;
+}
+
+td{
+    border: 1px solid black;
+    height: 150px;
+}
+
+
+table{
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-table{
+    height: 600px;
+}
+
+.nav-list a{
+    color: black;
+    font-size: 24px;
+    /* line-height: 100px; */
+    padding-left: 30px;
+
+}
