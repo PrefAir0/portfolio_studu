@@ -1,0 +1,168 @@
+#btn_color:active
+{
+    background: red;
+    transition: background 0.1s;
+}
+
+#button2:hover{
+    background-color: blue;
+
+}
+
+button{
+    padding: 30px;
+    font-size: 16px;
+    /* width: 100%; */
+}
+
+.btn-block{
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: 30px;
+    /* align-self: flex-start; */
+
+    
+}
+
+#button3:active{
+    font-size: 24px;
+}
+
+#wrap1{
+    border: 1px solid black;
+    width: 200px;
+    padding: 10px;
+    font-size: 1.5em;
+    transition: width 4s;
+}
+
+#wrap1:hover{
+    width: 500px;
+}
+
+.tooltip {       position: relative;
+	background: #eaeaea;
+	cursor: help;
+	display: inline-block;
+	text-decoration: none;
+	color: #222;
+	outline: none;
+	text-indent: 0;
+	padding: 0 3px;            }
+.tooltip:hover:before {
+	content: attr(data-title);
+	white-space: pre-line;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	z-index: 9999;
+	width: 230px;
+	margin-left: -127px;
+	padding: 10px;
+	border: 2px solid #ccc;
+	opacity: .9;
+    background-image: linear-gradient(rgba(255,255,255,.5), gba(255,255,255,0));
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 gba(255,255,255,.5) inset;
+    text-shadow: 0 1px 0 rgba(255,255,255,.4);                          
+}
+
+.tooltip:hover:after {
+	content: "";
+	position: absolute;
+	z-index: 10000;
+	bottom: 24px;
+	left: 50%;
+	margin-left: -8px;
+	border-top: 8px solid #ddd;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 0;
+}
+.yellow-tooltip:hover:before {
+	border-color: #e1ca82;
+	background-color: #ffeaa6;
+}
+.yellow-tooltip:hover:after {
+	border-top-color: #ffeaa6;
+}
+
+
+#circle{
+    width: 200px;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    background-color: pink ;
+    transition:  1s;
+}
+
+#circle:hover{
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+    border-radius: 40px;
+    transition: 1s;
+}
+
+#squere{
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+    border-radius: 40px;
+    transition: 1s;
+}
+
+#squere:hover{
+    width: 200px;
+    height: auto;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    background-color: pink ;
+    transition:  1s;
+}
+
+.figure-block{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    display: flex;
+    background-color: aqua;
+    height: 50px;
+}
+
+.nav li{
+    list-style: none;
+}
+
+.nav li a{
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-menu>ul{
+    background-color: aquamarine;
+    border: 1px solid blue;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.drop-menu:hover>ul{
+    visibility: visible;
+    opacity: 1;
+    transition-property: opacity, visibility;
+    transition-duration: 3s;
+}
+
+.drop-menu li{
+    border-bottom: blue dashed 1px;
+}
+
+.drop-menu li:last-child{
+    border-bottom: none;
+}
