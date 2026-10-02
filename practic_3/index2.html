@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="container-btn">
+    <div class="btn-select">
+        <button id="0" onclick=btn(0)>1</button>
+        <button id="1"onclick=btn(1)>2</button>
+        <button id="2"onclick=btn(2)>3</button>
+    </div>
+    <div class="btn-start">
+        <button onclick=next()>Загадать случайное число</button>
+        <p id="lower-text"></p>
+    </div>
+    </div>
+    <div class="text-block">
+        <p id="text"></p>
+        <img id="hid-img" src="img/image.png" alt="">
+    </div>
+    </div>
+</body>
+<script>
+
+    let x =null
+
+    function next(){
+        x = Math.floor(Math.random() * 3)
+        // alert(x)
+        document.getElementById("lower-text").textContent = "Число загадано"
+        document.getElementById("hid-img").style.display = "none"
+        document.getElementById("text").textContent = ""
+    }
+
+    function btn(num){
+        // alert(x)
+        if (x != null){
+            document.getElementById("hid-img").style.display = "none"
+            if (x == num){
+            document.getElementById("text").textContent = "Вы угадали число!"
+            document.getElementById("lower-text").textContent = null
+            document.getElementById("hid-img").style.display = "block"
+            let x = null
+        }
+        }
+        else{
+            // alert("Вы")
+            document.getElementById("lower-text").textContent = "Вы не загадали число"
+            document.getElementById("hid-img").style.display = "none"
+        }
+        
+    }
+
+</script>
+</html>

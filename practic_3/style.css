@@ -1,0 +1,92 @@
+.btn-select{
+    display: flex;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.btn-select button{
+    /* width: 100px;
+    height: 100px; */
+    padding: 30px;
+    font-size: 20px;
+    background-color: rgb(37, 80, 82);
+    transition: padding 1s;
+    color: white;border-radius: 30px;
+}
+
+.btn-select button:hover{
+    padding: 30px 40px;
+    /* height: 110px; */
+    background-color: rgb(25, 55, 56);
+    transition: padding 1s;
+    
+
+}
+
+.btn-select button:active{
+    padding: 30px 40px;
+    /* height: 110px; */
+    background-color: rgb(25, 55, 56);
+    transition: padding 1s;
+
+}
+
+.btn-select{
+    display: flex;
+    gap: 30px;
+}
+
+.btn-start button{
+    /* width: auto; */
+    font-size: 24px;
+    background-color: bisque;
+}
+
+.btn-start button:active{
+    background-color: red;
+}
+
+body{
+    background-color: rgb(134, 134, 255);
+    
+
+}
+
+.text-block p{
+    font-size: 30px;
+}
+
+#hid-img{
+    width: 300px;
+    /* display: none; */
+    animation-name: pulse-scale;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    display: none;
+}
+
+
+
+@keyframes pulse-scale {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(120%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
