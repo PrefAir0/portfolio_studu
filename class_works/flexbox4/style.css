@@ -1,0 +1,78 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font-family);
+    background-color: var(--background-color);
+}
+
+main{
+    flex-grow: 1;
+}
+
+:root{
+    --main-font-family: 'Inter', sans-self;
+    --background-color: #fff5f0;
+    --black: #1A0B00;
+    --orange: #FF7931;
+    --black-shadow: #451D00;
+    --whalter-white: #FFFFFF;
+}
+
+.header{
+    box-shadow: 0px 2px 20px var(--black-shadow);
+    background-color: var(--background-color);
+}
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_mainmenu ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_title{
+    font-size: 64px;
+    color: var(--orange);
+}
+
+.mainmenu_link a{
+    color: var(--black);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.catalog_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog_card{
+    padding: 20px;
+    background-color: var(--whalter-white);
+    width: 290px;
+}
+
+.card_img{
+    width: 100%;
+    height: auto;
+}
