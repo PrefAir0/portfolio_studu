@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перетаскивнаие курсором</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="items" id="source" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">
+        <div class="item" id="item1" draggable="true" ondragstart="return dragStart(event)" ondragend="return dragEnd(event)" draggable="true"><img src="0.gif" alt=""></div>
+        <div class="item" id="item2" draggable="true" ondragstart="return dragStart(event)" ondragend="return dragEnd(event)" draggable="true"><img src="1.gif" alt=""></div>
+        <div class="item" id="item3" draggable="true" ondragstart="return dragStart(event)" ondragend="return dragEnd(event)" draggable="true"><img src="2.gif" alt=""></div>
+    </div>
+    <div id="target" class="items" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">
+
+    </div>    
+</body>
+<script>
+    function dragStart(ev) 
+      {
+        ev.dataTransfer.effectAllowed='link';
+        ev.dataTransfer.setData("Text",ev.target.getAttribute('id'));
+        ev.dataTransfer.setDragImage(ev.target,0,0);
+        return true;
+      }
+
+      function dragDrop(ev) 
+      {
+        console.log("dragDrop")
+        var idelt = ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(idelt));
+        ev.stopPropagation();
+        return false; 
+      }
+
+      function dragOver(ev) 
+      {
+        var idelt = ev.dataTransfer.getData("Text");
+        var id = ev.target.getAttribute('id');
+        if (id == "source" || id == "target"){
+            return false
+        }
+        else{
+            return true
+        }
+        
+        console.log('DragOver')
+
+
+        // return false;
+      }
+
+      function dragEnter(ev) 
+      {
+      var idelt = ev.dataTransfer.getData("Text");
+      console.log('DragEnter')
+      return true;
+      }
+
+      function dragEnd(ev) 
+      {
+        ev.dataTransfer.clearData("Text");
+        console.log('DragEnd')
+        return true
+      }
+</script>
+</html>
