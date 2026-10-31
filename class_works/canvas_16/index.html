@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="createImage();" >
+    <div class="" style="display: flex; flex-wrap: wrap; gap: 30px;">
+    <div class="">
+    <h2>Эксперемент</h2>
+    <canvas id="canvas" style="border: 2px solid black" width="200" height="200">CANVAS</canvas> 
+        </div>
+        <div class="">
+    <h2>Рисование прямых линий</h2>
+    <canvas id="canvas2" style= "border: 2px solid black" width="200" height="200"></canvas>
+    </div>
+    <div class="">
+    <h2>Рисование дуг и кривых</h2>
+    <canvas id="canvas3" style="border: 2px solid black" width="200" height="200"></canvas>
+        </div>
+        <div class="">
+    <h2>Рисование кривых бизье</h2>
+    <canvas id="canvas4" style="border: 2px solid black" width="200" height="200"></canvas>
+            </div>
+
+    <div class="">
+    <h2>Рисование кривых бизье</h2>
+    <canvas id="canvas5" style="border: 2px solid black" width="200" height="200"></canvas>
+    </div>  
+    </div>
+
+    <h2>Задание с домиком</h2>
+    <canvas id="canvas6" style="border: 2px solid black" width="400" height="400"></canvas>
+</body>
+<script>
+
+    function createImage()
+    {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext('2d');
+        
+        
+        context.fillStyle = "blue"
+        context.fillRect(20, 20, canvas.width-20, canvas.height); 
+
+        context.fillStyle = "pink"
+        context.fillRect(40, 40, canvas.width - 70, 150); 
+        
+        context.fillStyle = "red"
+        context.fillRect(100, 100, 140, 150); 
+
+        context.fillStyle = "green"
+        context.fillRect(10, 10, 40, 100);  
+        
+        
+        var canvas = document.getElementById("canvas2");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(0,100); 
+        ctx.lineTo(100,0); 
+        ctx.lineTo(200,100); 
+        ctx.lineTo(150,200); 
+        ctx.lineTo(50,200); 
+        ctx.lineTo(0,100); 
+        ctx.stroke(); 
+
+        var canvas = document.getElementById("canvas3");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100, 100, 75, 2.2*Math.PI, 2.8 * Math.PI, false);
+        ctx.lineWidth = 5; 
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+
+        var canvas = document.getElementById("canvas4");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(10, 15);
+        ctx.bezierCurveTo(75, 55, 175, 20, 250, 15);
+        ctx.moveTo(10, 15);
+        ctx.quadraticCurveTo(100, 100, 250, 15);
+        ctx.stroke();
+
+        var canvas = document.getElementById("canvas5");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath(); 
+        ctx.lineWidth = 10; 
+        ctx.lineCap = "butt"; 
+        ctx.moveTo(20, 20); 
+        ctx.lineTo(180, 20); 
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.lineCap = "round"; 
+        ctx.moveTo(20, 40); 
+        ctx.lineTo(180, 40); 
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.lineCap = "square"; 
+        ctx.moveTo(20, 60); 
+        ctx.lineTo(180, 60); 
+        ctx.stroke();
+
+
+
+
+
+        var canvas = document.getElementById("canvas6");
+        var ctx = canvas.getContext('2d')
+
+        // alert(canvas.width)
+        ctx.fillStyle = "yellow"
+        // ctx.fillRect(100, 170, (canvas.width - 200), (canvas.height - 200))
+
+        ctx.strokeStyle = 'red'
+
+        ctx.beginPath()
+        ctx.lineWidth = 5
+        
+        ctx.lineTo(235, 150)
+        ctx.lineTo(235, 75)
+        ctx.lineTo(230, 75)
+        ctx.lineTo(230, 70)
+        ctx.lineTo(255, 70)
+        ctx.lineTo(255, 75)
+        ctx.lineTo(250, 75)
+        ctx.lineTo(250, 150)
+
+        ctx.fillStyle = "red"
+        ctx.stroke()
+        ctx.fill()
+
+        ctx.lineWidth = 10
+        ctx.beginPath();
+         
+         
+        ctx.lineTo(300, 200) 
+        ctx.lineTo(300,370); 
+        ctx.lineTo(100,370); 
+        ctx.lineTo(100, 200);
+        ctx.lineTo(200, 100);
+        ctx.lineTo(302,203);
+        ctx.stroke(); 
+        ctx.fillStyle = "yellow"
+        ctx.fill()
+
+
+        ctx.fillStyle = "blue"
+
+        ctx.fillRect(170, 250, 60, 60)
+
+        ctx.beginPath()
+        ctx.strokeStyle = 'white'
+        ctx.lineWidth = 5
+        ctx.lineTo(195, 250)
+        ctx.lineTo(195, 310)
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.lineTo(195, 275)
+        ctx.lineTo(230, 275)
+        ctx.stroke();
+
+
+    }
+</script>
+</html>
