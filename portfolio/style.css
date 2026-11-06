@@ -31,6 +31,9 @@ main{
 .info-block{
     border: 1px solid black;
     display: flex;
+    align-items: stretch;
+    
+    /* grid-template-columns: 1fr 1fr 1fr; */
     width: 1200px;
 }
 
@@ -46,15 +49,20 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column; 
-    height: 40px;
+    height: 60px;
+    
+    width: 160px;
+
 }
 
 .tasks{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     gap: 10px;
     padding: 20px;
-
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .task a{
